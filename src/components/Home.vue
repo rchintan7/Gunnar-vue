@@ -13,7 +13,7 @@
         <p class="text-sm py-4">Photos</p>
         <img
           class="py-4 cursor-pointer"
-          src="@/assets/Content/images/button-download.gif"
+          src="/assets/Content/images/button-download.gif"
           alt="download photo"
         />
         <p class="text-sm py-4">

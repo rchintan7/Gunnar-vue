@@ -5,7 +5,7 @@
       :style="{
         backgroundImage:
           'url(' +
-          require('@/assets/Content/images/BootstrapHeaderComposed.jpg') +
+          require('/public/assets/Content/images/BootstrapHeaderComposed.jpg') +
           ')',
       }"
     >
