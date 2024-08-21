@@ -1,21 +1,15 @@
-<!-- src/App.vue -->
 <template>
-  <div id="app relative">
-    <Header></Header>
-    <router-view></router-view>
-    <Footer></Footer>
-  </div>
+  <!-- <GlobalProvider> -->
+  <SessionUserProvider>
+    <Frame>
+      <router-view></router-view>
+    </Frame>
+  </SessionUserProvider>
+  <!-- </GlobalProvider> -->
 </template>
 
-<script>
-import Header from "./components/Header.vue";
-import Footer from "./components/Footer.vue";
-
-export default {
-  name: "App",
-  components: {
-    Header,
-    Footer,
-  },
-};
+<script setup>
+// import GlobalProvider from './components/GlobalProvider.vue';
+import SessionUserProvider from "./components/user/SessionUserProvider.vue";
+import Frame from "./components/navbar/Frame.vue";
 </script>

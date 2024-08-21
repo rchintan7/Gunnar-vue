@@ -1,7 +1,13 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+// main.js
+import { createApp } from 'vue';
+import App from './App.vue';
+import store from './store'; // Adjust the path if necessary
 import router from './router'
-import './main.css'; 
+import '../public/index.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-css-only/css/bootstrap.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-createApp(App).use(router).mount('#app')
+const app = createApp(App);
+app.use(store).use(router);  // This provides the store globally
+app.mount('#app');

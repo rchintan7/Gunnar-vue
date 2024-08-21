@@ -1,7 +1,11 @@
+import Albums from "@/views/Albums.vue";
+import Home from "@/views/Home.vue";
+import LoginOutForm from "@/components/user/LoginOutForm.vue";
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "@/components/Home.vue";
-import User from "@/components/User.vue";
-import Albums from "@/components/Albums.vue";
+import NotFound from "@/views/NotFound.vue";
+// import Home from "@/components/Home.vue";
+// import User from "@/components/User.vue";
+// import Albums from "@/components/Albums.vue";
 
 const routes = [
   {
@@ -12,14 +16,18 @@ const routes = [
   {
     path: "/user",
     name: "User",
-    component: User,
+    component: LoginOutForm,
   },
   {
     path: "/albums",
     name: "Albums",
     component: Albums,
   },
-  // other routes
+  {
+    path: "/:pathMatch(.*)*",
+    name: "NotFound",
+    component: NotFound,
+  },
 ];
 
 const router = createRouter({
